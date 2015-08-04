@@ -37,4 +37,4 @@ Route::post('password/reset', ['as' => 'password/postReset', 'uses' =>  'Auth\Pa
 
 //Categories
 //Route::controller('admin/categories', 'CategoriesController');
-Route::get('categories', 'CategoriesController@index');
+Route::resource('admin/categories', 'CategoriesController');

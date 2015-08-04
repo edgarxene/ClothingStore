@@ -20,8 +20,7 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = \App\Category::All();
-        return view('admin.index', compact('categories'));//Regresar la variable categories a la vista con todos los datos
-        //return view('admin.index', ['name' => 'Victoria']);
+        return view('admin.categories.index', compact('categories'));//Regresar la variable categories a la vista con todos los datos
 
         // return \View::make('categories.index')
         //     ->with('categories', Category::all());
@@ -44,7 +43,7 @@ class CategoriesController extends Controller
      */
     public function store()
     {
-        //
+        return 'Guardado...';
     }
 
     /**
@@ -88,7 +87,7 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return 'Estoy en destroy';
     }
 
 
