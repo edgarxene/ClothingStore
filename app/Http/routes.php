@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('admin', 'AdminController@index');
+//Route::get('admin', 'AdminController@index');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -38,3 +38,4 @@ Route::post('password/reset', ['as' => 'password/postReset', 'uses' =>  'Auth\Pa
 //Categories
 //Route::controller('admin/categories', 'CategoriesController');
 Route::resource('admin/categories', 'CategoriesController');
+Route::resource('admin', 'AdminController@index');

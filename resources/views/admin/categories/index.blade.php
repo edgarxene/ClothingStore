@@ -1,8 +1,8 @@
-@extends('app')
+@extends('layoutAdmin')
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6 col-md-offset-4">
                 <div class="panel panel-default">
                     <div class="panel-heading"> Panel de Administracion - Categorias</div>
                     <div class="panel-body">
@@ -13,13 +13,10 @@
                                 <ul>
                                     @foreach($categories as $category)
                                         <li>
-                                            {!! $category->name !!}
-                                          
-                                            
-                                           {!! Form::open(['route'=>'admin.categories.destroy', 'method'=>'POST']) !!}  
-                                            
+                                            {!! Form::open(['route'=>'admin.categories.destroy', 'method'=>'POST']) !!}                                          
                                             {!! Form::hidden('id',$category->id) !!}
-                                            {!!  Form::submit('delete', array('class'=>'btn btn-danger')) !!}
+                                            {!! $category->name !!}
+                                            {!! Form::submit('borrar', array('class'=>'btn btn-link')) !!}<i class="glyphicon glyphicon-remove"></i>
                                             {!! Form::close() !!}
                                         </li>
                                     @endforeach
@@ -44,7 +41,7 @@
                             {!!  Form::label('name') !!}
                             {!!  Form::text('name') !!}
                         </p>
-                        {!!  Form::submit('Create category', array('class'=>'btn btn-primary')) !!}
+                        {!!  Form::submit('Crear', array('class'=>'btn btn-primary')) !!}
                         {!! Form::close() !!}
                     </div> 
                 </div>

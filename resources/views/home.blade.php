@@ -2,9 +2,9 @@
 @section('content')
    <div class="jumbotron">
       <div class="container">
-        <!--<h1>TIENDA DE ROPA</h1>
-        <p>Este es un template de laravel 5.1 + bootstrap</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+        <h1>Clothing Store</h1>
+        <p>Template de laravel 5.1 + bootstrap</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel</title>
     {!! Html::style('assets/css/bootstrap.css') !!}
+    {!! Html::style('assets/css/menuAdmin.css') !!}
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -17,10 +18,10 @@
     <![endif]-->
 </head>
 <body>
-	@include('partials.layout.navbar')
+
+	@include('partials.layout.navbarAdmin')
 	@include('partials.layout.errors')
     @yield('content')
-    @include('partials.layout.footer')
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
