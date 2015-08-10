@@ -36,6 +36,6 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', ['as' => 'password/postReset', 'uses' =>  'Auth\PasswordController@postReset']);
 
 //Categories
-//Route::controller('admin/categories', 'CategoriesController');
+
 Route::resource('admin/categories', 'CategoriesController');
 Route::resource('admin', 'AdminController@index');

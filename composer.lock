@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1d22eaea64386434ca0de6b3cdbb924c",
+    "hash": "691d6eeea8f55e3055f6bbab8b4da083",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -414,6 +414,49 @@
                 "tokenizer"
             ],
             "time": "2015-03-11 20:06:43"
+        },
+        {
+            "name": "laracasts/flash",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "a042e8126c5d986ec435f1c618cc320cca8eec66"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/a042e8126c5d986ec435f1c618cc320cca8eec66",
+                "reference": "a042e8126c5d986ec435f1c618cc320cca8eec66",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                },
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "time": "2015-03-02 16:02:14"
         },
         {
             "name": "laravel/framework",
@@ -3130,7 +3173,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "barryvdh/laravel-debugbar": 20,
-        "styde/blade-pagination": 20
+        "styde/blade-pagination": 20,
+        "laracasts/flash": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

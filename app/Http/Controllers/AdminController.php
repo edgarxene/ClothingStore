@@ -20,9 +20,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $categories = \App\Category::All();
+        /*$categories = \App\Category::All();
         return view('admin.index', compact('categories'));
-       
+       */
         //return \View::make('admin');
+        //flash()->success('Bienvenido!!: ');
+        return view('admin.index');
     }
 }

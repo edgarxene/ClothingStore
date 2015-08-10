@@ -18,13 +18,17 @@
     <![endif]-->
 </head>
 <body>
-
-	@include('partials.layout.navbarAdmin')
-	@include('partials.layout.errors')
+    @include('partials.layout.navbar')
+    @include('partials.layout.navbarAdmin')
+    @include('partials.layout.errors')
     @yield('content')
+  
 
     <!-- Scripts -->
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     {!! Html::script('assets/js/bootstrap.min.js') !!}
+    {!! Html::script('assets/js/utilsjquery.js') !!}
+
 </body>
 </html>

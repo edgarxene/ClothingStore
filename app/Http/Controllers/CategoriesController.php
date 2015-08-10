@@ -19,7 +19,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = \App\Category::All();
+        $categories = \App\Category::orderBy('name')->get();;
         return view('admin.categories.index', compact('categories'));//Regresar la variable categories a la vista con todos los datos
 
         // return \View::make('categories.index')
@@ -33,7 +33,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -41,9 +41,15 @@ class CategoriesController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        return 'Guardado...';
+            \App\Category::create([
+            'name' => $request['name']
+        ]);
+        
+        flash()->success('Nueva categoria creada:   "'. $request['name'].'"');
+
+        return redirect('admin/categories');
     }
 
     /**

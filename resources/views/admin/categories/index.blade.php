@@ -10,6 +10,7 @@
                             <p>Aquí tu puedes ver, borrar, y crear nuevas categorias.</p>
                             <div class="form-group">
                                 <h2>Categorias</h2><hr/>
+                                @include('flash::message')<!--Notificaciones Flash Laracast-->
                                 <ul>
                                     @foreach($categories as $category)
                                         <li>
@@ -43,9 +44,12 @@
                         </p>
                         {!!  Form::submit('Crear', array('class'=>'btn btn-primary')) !!}
                         {!! Form::close() !!}
-                    </div> 
+
+                         
+                        </div> 
                 </div>
             </div>
         </div>
     </div>
+
 @endsection
