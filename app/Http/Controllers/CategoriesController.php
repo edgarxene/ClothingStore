@@ -93,7 +93,9 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        return 'Estoy en destroy';
+         \App\Category::destroy($id);
+         flash()->warning('La categoria fue eliminada correctamente');
+        return redirect('admin/categories');
     }
 
 

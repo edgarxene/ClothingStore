@@ -11,17 +11,28 @@
                             <div class="form-group">
                                 <h2>Categorias</h2><hr/>
                                 @include('flash::message')<!--Notificaciones Flash Laracast-->
-                                <ul>
+                                <table class="table table-striped">
                                     @foreach($categories as $category)
-                                        <li>
-                                            {!! Form::open(['route'=>'admin.categories.destroy', 'method'=>'POST']) !!}                                          
-                                            {!! Form::hidden('id',$category->id) !!}
-                                            {!! $category->name !!}
-                                            {!! Form::submit('borrar', array('class'=>'btn btn-link')) !!}<i class="glyphicon glyphicon-remove"></i>
+                                    <tr>
+                                        <td>
+                                            {!! Form::label($category->name) !!}
+                                            {!! Form::text('name') !!}
+                                            
+                                        </td>
+                                         <td>   
+                                            {!! Form::open(['route'=>['admin.categories.update', $category->id],'method'=>'PUT']) !!}                  
+                                            {!! Form::submit('editar', array('class'=>'btn btn-link')) !!}<i class="glyphicon glyphicon-pencil"></i>
                                             {!! Form::close() !!}
-                                        </li>
+                                        </td>
+                                        <td>
+                                            {!! Form::open(['route'=>['admin.categories.destroy', $category->id],'method'=>'DELETE']) !!}                  
+                                            {!! Form::submit('borrar', array('class'=>'btn btn-link')) !!}<i class="glyphicon glyphicon-remove"></i>
+                                            {!! Form::close() !!} 
+                                         </td>   
+                                        
+                                    </tr>
                                     @endforeach
-                                </ul>
+                                </table>
                             </div>
                         </div>
                         <h2>Crear nueva Categoria</h2><hr/>

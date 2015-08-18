@@ -15,7 +15,8 @@
                   <a href="#"><i class="fa fa-gift fa-lg"></i> Agregar <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="products">
-                    <li class="active"><a href="#">Categorias</a></li>
+                    <li class="active"><a href="#">Other</a></li>
+                    <li>{!! link_to('admin/categories', $title = 'Categorias') !!}</li>
                     <li><a href="#">General</a></li>
                     <li><a href="#">Buttons</a></li>
                     <li><a href="#">Tabs & Accordions</a></li>
