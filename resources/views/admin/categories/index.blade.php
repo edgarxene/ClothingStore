@@ -15,18 +15,28 @@
                                     @foreach($categories as $category)
                                     <tr>
                                         <td>
-                                            {!! Form::label($category->name) !!}
-                                            {!! Form::text('name') !!}
-                                            
+                                            <div class="editLabel">{!! Form::label($category->name) !!}</div>
+
+                                            <div class="editText">       
+
+                                                {!! Form::model($category,['route'=>['admin.categories.edit', $category->id],'method'=>'PUT']) !!}
+                                                {!! Form::text('name') !!}
+                                                {!! Form::close() !!}
+
+                                            </div>
+
+
                                         </td>
                                          <td>   
-                                            {!! Form::open(['route'=>['admin.categories.update', $category->id],'method'=>'PUT']) !!}                  
-                                            {!! Form::submit('editar', array('class'=>'btn btn-link')) !!}<i class="glyphicon glyphicon-pencil"></i>
-                                            {!! Form::close() !!}
+                                            <div id="btnEditar">
+                                                <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></button>
+                                                
+                                            </div>
                                         </td>
                                         <td>
                                             {!! Form::open(['route'=>['admin.categories.destroy', $category->id],'method'=>'DELETE']) !!}                  
-                                            {!! Form::submit('borrar', array('class'=>'btn btn-link')) !!}<i class="glyphicon glyphicon-remove"></i>
+                                            {!! Form::submit('borrar', array('class'=>'btn btn-link')) !!}
+                                            <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
                                             {!! Form::close() !!} 
                                          </td>   
                                         

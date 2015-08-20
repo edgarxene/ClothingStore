@@ -71,7 +71,9 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $categories = \App\Category::find($id);
+        return view('admin/categories',['categories'=>$categories]);
+        //return view('admin/categories', compact('categories'));
     }
 
     /**
@@ -82,7 +84,7 @@ class CategoriesController extends Controller
      */
     public function update($id)
     {
-        //
+
     }
 
     /**
