@@ -15,24 +15,11 @@
                                     @foreach($categories as $category)
                                     <tr>
                                         <td>
-                                            <div class="editLabel">{!! Form::label($category->name) !!}</div>
-
-                                            <div class="editText">       
-
-                                                {!! Form::model($category,['route'=>['admin.categories.edit', $category->id],'method'=>'PUT']) !!}
-                                                {!! Form::text('name') !!}
-                                                {!! Form::close() !!}
-
-                                            </div>
-
-
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            {!! link_to_route('admin.categories.edit', $title = 'Editar', $parameters = $category->id, $attributes = ['class' => 'btn btn-primary']) !!}
+                                            {!! Form::label($category->name) !!}
                                         </td>
-                                         <td>   
-                                            <div id="btnEditar">
-                                                <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></button>
-                                                
-                                            </div>
-                                        </td>
+                                        
                                         <td>
                                             {!! Form::open(['route'=>['admin.categories.destroy', $category->id],'method'=>'DELETE']) !!}                  
                                             {!! Form::submit('borrar', array('class'=>'btn btn-link')) !!}

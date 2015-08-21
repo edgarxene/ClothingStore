@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Redirect;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Category;//Se agrega para no tener que estar escribiendo  \App\Category cada vez que se utilice
 
 class CategoriesController extends Controller
 {
@@ -19,7 +21,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = \App\Category::orderBy('name')->get();;
+        $categories = Category::orderBy('name')->get();;
         return view('admin.categories.index', compact('categories'));//Regresar la variable categories a la vista con todos los datos
 
         // return \View::make('categories.index')
@@ -43,7 +45,7 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-            \App\Category::create([
+            Category::create([
             'name' => $request['name']
         ]);
         
@@ -71,8 +73,8 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        $categories = \App\Category::find($id);
-        return view('admin/categories',['categories'=>$categories]);
+        $category = Category::find($id);
+        return view('admin/categories/edit',['category'=>$category]);
         //return view('admin/categories', compact('categories'));
     }
 
@@ -82,9 +84,14 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($id,Request $request)
     {
-
+        $category = Category::find($id);
+        $category->fill($request->all());
+        $category->save();
+        flash()->warning('La categoria fue editada correctamente');
+        return Redirect::to('admin/categories');
+  
     }
 
     /**
@@ -95,7 +102,7 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-         \App\Category::destroy($id);
+         Category::destroy($id);
          flash()->warning('La categoria fue eliminada correctamente');
         return redirect('admin/categories');
     }
