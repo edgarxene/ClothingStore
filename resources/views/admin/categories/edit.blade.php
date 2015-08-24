@@ -18,6 +18,7 @@
                             {!! Form::text('name') !!}
                         </p>
                         {!!  Form::submit('Guardar', array('class'=>'btn btn-primary')) !!}
+                        {!! link_to('admin/categories', $title = 'Canelar', array('class'=>'btn btn-danger')) !!}
                         {!! Form::close() !!}
 
                          
