@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Redirect;
 
 use App\Http\Requests;
+use App\Http\Requests\CategoryCreateRequest;
 use App\Http\Controllers\Controller;
 use App\Category;//Se agrega para no tener que estar escribiendo  \App\Category cada vez que se utilice
 
@@ -43,7 +44,7 @@ class CategoriesController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CategoryCreateRequest $request)
     {
             Category::create([
             'name' => $request['name']
@@ -84,7 +85,7 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id,Request $request)
+    public function update($id,CategoryUpdateRequest $request)
     {
         $category = Category::find($id);
         $category->fill($request->all());

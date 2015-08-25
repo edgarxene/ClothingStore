@@ -11,6 +11,7 @@
                             <div class="form-group">
                                 <h2>Categorias</h2><hr/>
                                 @include('flash::message')<!--Notificaciones Flash Laracast-->
+                                @include('partials.layout.errors')
 
                                 <div class="row">
                                     <div class="col-md-12">
@@ -61,7 +62,8 @@
                                             {!!  Form::label('Nombre de la Categoria:') !!}
                                             </div>
                                             <div class="col-md-7">
-                                            {!!  Form::text('name') !!}                                
+                                            <!--{!!  Form::text('name') !!}-->
+                                            @include('admin.categories.forms.formCategory')
                                             </div>
                                             <div class="col-md-1">                                
                                             {!!  Form::submit('Crear', array('class'=>'btn btn-success btn-xs')) !!}

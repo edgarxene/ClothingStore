@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Laravel</title>
-    {!! Html::style('assets/css/bootstrap.css') !!}
-    {!! Html::style('assets/css/menuAdmin.css') !!}
+    {!! Html::style('assets/css/bootstrap.min.css') !!}
+    {!! Html::style('assets/css/sb-admin-2.css') !!}
+    {!! Html::style('assets/css/metisMenu.min.css') !!}
+    {!! Html::style('assets/css/font-awesome.min.css') !!}
+<!--     {!! Html::style('assets/css/menuAdmin.css') !!} -->
 
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -18,17 +21,23 @@
     <![endif]-->
 </head>
 <body>
-    @include('partials.layout.navbar')
+
     @include('partials.layout.navbarAdmin')
-    @include('partials.layout.errors')
     @yield('content')
-  
+
+
 
     <!-- Scripts -->
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    {!! Html::script('assets/js/jquery.min.js') !!}
     {!! Html::script('assets/js/bootstrap.min.js') !!}
+    {!! Html::script('assets/js/metisMenu.min.js') !!}
+    {!! Html::script('assets/js/sb-admin-2.js') !!}
     {!! Html::script('assets/js/utilsjquery.js') !!}
+
+
+
+
 
 </body>
 </html>

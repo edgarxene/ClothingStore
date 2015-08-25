@@ -15,7 +15,7 @@
                          {!! Form::model($category,['route'=>['admin.categories.update', $category->id],'method'=>'PUT']) !!}
                                                 
                         <p>
-                            {!! Form::text('name') !!}
+                            @include('admin.categories.forms.formCategory')
                         </p>
                         {!!  Form::submit('Guardar', array('class'=>'btn btn-primary')) !!}
                         {!! link_to('admin/categories', $title = 'Canelar', array('class'=>'btn btn-danger')) !!}
