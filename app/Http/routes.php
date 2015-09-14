@@ -38,4 +38,4 @@ Route::post('password/reset', ['as' => 'password/postReset', 'uses' =>  'Auth\Pa
 //Categories
 
 Route::resource('admin/categories', 'CategoriesController');
-Route::resource('admin', 'AdminController@index');
+//Route::resource('admin', 'AdminController@index');

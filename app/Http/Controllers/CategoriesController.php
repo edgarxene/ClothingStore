@@ -22,7 +22,10 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $categories = Category::orderBy('name')->get();;
+        //$categories = Category::orderBy('name')->get();
+        $categories = Category::paginate(2);
+        //$categories->setPath('admin/categories');
+
         return view('admin.categories.index', compact('categories'));//Regresar la variable categories a la vista con todos los datos
 
         // return \View::make('categories.index')
