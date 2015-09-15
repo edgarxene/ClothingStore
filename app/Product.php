@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Product extends Model
 {
     protected $fillable = array('category_id','titulo','descripcion','precio','disponible','imagen');
 /*    public static $rules = array(
@@ -15,8 +15,9 @@ class Category extends Model
     	'disponible'=>'integer',
     	'imagen'=>'required|image|mimes:jpeg,jpg,bmp,png,gif'
     	);
-
+*/
     public function category(){
     	return $this->belongsTo('Category');
-    }*/
+    }
+
 }
