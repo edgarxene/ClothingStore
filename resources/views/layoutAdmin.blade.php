@@ -9,6 +9,7 @@
     {!! Html::style('assets/css/sb-admin-2.css') !!} 
     {!! Html::style('assets/css/metisMenu.min.css') !!}
     {!! Html::style('assets/css/font-awesome.min.css') !!} 
+    {!! Html::style('assets/css/iStyle.css') !!} 
     <!--{!! Html::style('assets/css/demo.css') !!} 
     {!! Html::style('assets/css/bootstrap.css') !!}
     {!! Html::style('assets/css/menuAdmin.css') !!}-->

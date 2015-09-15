@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Requests\CategoryCreateRequest;
 use App\Http\Controllers\Controller;
 use App\Product;//Se agrega para no tener que estar escribiendo  \App\Category cada vez que se utilice
+use App\Category;
 
 class ProductsController extends Controller
 {
@@ -28,7 +29,7 @@ class ProductsController extends Controller
         }
 
         
-        $products = Product::all();
+        $products = Product::paginate(5);
         return view('admin.products.index', compact('products'));//Regresar la variable categories a la vista con todos los datos
     }
 

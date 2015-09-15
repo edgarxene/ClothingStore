@@ -11,6 +11,6 @@ class Category extends Model
 	//public static $rules = array('name'=>'required|min:3');
     
     public function products(){
-    	return $this->hasMany('Product')
+    	return $this->hasMany('Product');
     }
 }

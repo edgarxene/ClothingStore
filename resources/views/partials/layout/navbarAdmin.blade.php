@@ -31,29 +31,32 @@
             <div class="navbar-default sidebar" id="nav-side-menu" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                                <li>
-                                    <a href="{!!URL::to('/admin/categories')!!}"><i class='glyphicon glyphicon-list-alt'></i> Categorias</a>
-                                </li>
-                        <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Pelicula<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="{!!URL::to('/admin/categories')!!}"><i class='fa fa-plus fa-fw'></i>Edgar</a>
-                                </li>
-                                <li>
-                                    <a href="{!!URL::to('/admin')!!}"><i class='fa fa-plus fa-fw'></i> Peliculas</a>
+                      <li>
+                        <a href="{!!URL::to('/admin/categories')!!}"><i class='glyphicon glyphicon-list-alt'></i> Categorias</a>
+                      </li>
+                      <li>
+                        <a href="{!!URL::to('/admin/products')!!}"><i class='fa fa-barcode'></i> Productos</a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-film fa-fw"></i> TeSt1<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{!!URL::to('/admin/categories')!!}"><i class='fa fa-plus fa-fw'></i>Submenu1</a>
+                            </li>
+                      <li>
+                                    <a href="{!!URL::to('/admin')!!}"><i class='fa fa-plus fa-fw'></i> Submenu2</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-child fa-fw"></i> Genero<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-child fa-fw"></i> TeSt2<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Eliminar</a>
                                 </li>
                             </ul>
                         </li>
