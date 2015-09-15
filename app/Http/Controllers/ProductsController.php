@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Redirect;
 
 use App\Http\Requests;
+use App\Http\Requests\CategoryCreateRequest;
 use App\Http\Controllers\Controller;
 use App\Product;//Se agrega para no tener que estar escribiendo  \App\Category cada vez que se utilice
-
 
 class ProductsController extends Controller
 {
@@ -21,7 +22,13 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(5);
+        $categories = array();
+        foreach (Category::all() as $category) {
+            $categories[$category->id] = $category->name;
+        }
+
+        
+        $products = Product::all();
         return view('admin.products.index', compact('products'));//Regresar la variable categories a la vista con todos los datos
     }
 
