@@ -5629,7 +5629,7 @@ a.list-group-item-danger.active:focus {
 .panel-default {
   border-color: #ddd;
   position: relative;
-  margin-top: 60px;
+  margin-top: 40px;
 
 }
 .panel-default > .panel-heading {
