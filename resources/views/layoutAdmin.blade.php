@@ -7,7 +7,6 @@
     <title>Laravel</title>
     {!! Html::style('assets/css/bootstrap.css') !!}
     {!! Html::style('assets/css/sb-admin-2.css') !!} 
-    {!! Html::style('assets/css/metisMenu.min.css') !!}
     {!! Html::style('assets/css/font-awesome.min.css') !!} 
     {!! Html::style('assets/css/iStyle.css') !!} 
     <!--{!! Html::style('assets/css/demo.css') !!} 
@@ -25,12 +24,21 @@
 </head>
 <body>
 
-
-
-    @include('partials.layout.navbarAdmin')
-    @yield('content')
-
-
+<!--Layout 2 columnas-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            @include('partials.layout.navbar')  
+        </div>  
+        <div class="col-md-2">
+            @include('partials.layout.navbarAdmin')  
+        </div>
+        <div class="col-md-10">
+            @yield('content')
+        </div>
+    </div>
+</div>
+  
 
     <!-- Scripts -->
 

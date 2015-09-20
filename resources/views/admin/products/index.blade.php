@@ -1,8 +1,6 @@
 @extends('layoutAdmin')
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-2">
+    
                 <div class="panel panel-default">
                     <div class="panel-heading"> Panel de Administracion - Productos</div>
                     <div class="panel-body">
@@ -13,15 +11,15 @@
                                 @include('flash::message')<!--Notificaciones Flash Laracast-->
                                 @include('partials.layout.errors')
 
-                                <div class="row">
-                                    <div class="col-md-12">
+                               
                                         <table class="table table-striped">
                                         <th>Titulo</th>
                                         <th>Descripción</th>
                                         <th>Precio</th>
                                         <th>Disponible</th>
                                         <th>Imagen</th>
-                                            
+                                        <th></th>
+                                        <th></th>   
                                         
                                                 @foreach($products as $product)
                                                 <tr>
@@ -59,8 +57,7 @@
                                         </table>
 
                                         {!!$products->render()!!}
-                                    </div>
-                                </div>
+                                 
                             </div>
                         </div>
 
@@ -98,8 +95,6 @@
                         
                         </div> 
                 </div>
-            </div>
-        </div>
-    </div>
+           
 
 @endsection

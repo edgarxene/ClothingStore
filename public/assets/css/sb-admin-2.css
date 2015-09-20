@@ -130,8 +130,8 @@ body {
 @media(min-width:768px) {
     .sidebar {
         z-index: 1;
-        position: absolute;
-        width: 250px;
+        position: relative;
+        width: 200px;
         margin-top: 51px;
     }
 
@@ -301,6 +301,7 @@ table.dataTable thead .sorting:after {
 
 .panel-green {
     border-color: #5cb85c;
+    margin-top: 60px;
 }
 
 .panel-green .panel-heading {
